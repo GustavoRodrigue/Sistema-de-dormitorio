@@ -1,4 +1,6 @@
 dao\QuartosDao.class
+model\Aluguel_.class
+dao\AluguelDao.class
 model\Quartos.class
 util\Msg.class
 model\Quartos_.class
@@ -9,9 +11,11 @@ controller\ClienteController.class
 dao\GenericDao.class
 model\Cliente_.class
 controller\QuartosController.class
+model\Aluguel.class
 controller\ClienteController1.class
 controller\UsuarioController.class
 dao\UsuarioDao.class
 model\Cliente.class
 Teste.class
+controller\AluguelController.class
 bean\ClienteBean.class

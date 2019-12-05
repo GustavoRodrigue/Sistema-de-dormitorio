@@ -84,7 +84,7 @@ public class Cliente implements Serializable {
 
     @Override
     public String toString() {
-        return "model.Cliente[ id=" + id + " ]";
+        return  nome;
     }
 
     @XmlTransient

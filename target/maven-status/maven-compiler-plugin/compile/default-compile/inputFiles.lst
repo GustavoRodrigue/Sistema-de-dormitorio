@@ -1,14 +1,17 @@
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\controller\UsuarioController.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\controller\ClienteController.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\dao\GenericDao.java
+E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\model\Aluguel.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\dao\QuartosDao.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\Teste.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\model\Usuario.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\model\Quartos.java
+E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\controller\AluguelController.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\bean\ClienteBean.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\model\Cliente.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\controller\QuartosController.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\dao\UsuarioDao.java
+E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\dao\AluguelDao.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\util\Msg.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\controller\ClienteController1.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\dao\ClienteDao.java

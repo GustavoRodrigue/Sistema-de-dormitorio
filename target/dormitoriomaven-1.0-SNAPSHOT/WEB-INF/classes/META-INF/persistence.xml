@@ -5,6 +5,7 @@
     <class>model.Cliente</class>
     <class>model.Usuario</class>
     <class>model.Quartos</class>
+    <class>model.Cliente_1</class>
     <class>model.Aluguel</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>

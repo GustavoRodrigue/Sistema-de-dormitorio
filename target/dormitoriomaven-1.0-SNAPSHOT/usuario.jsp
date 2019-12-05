@@ -26,7 +26,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            <a href="cadastroUsuario.jsp"><button  type="submit" class="btn btn-info btn-block" style="margin-bottom: 30px;">Novo</button></a>
+                            <a href="cadastroUsuario.jsp" class=""><button  type="submit" class="btn btn-info btn-lg btn-block" style="margin-bottom: 30px;">Novo</button></a>
 
                             <table class="table table-striped">
                                 <tr class="thead-dark">
@@ -45,7 +45,7 @@
                                         <td>${usuario.cpf}</td>
                                         <td>
                                             <a href="UsuarioController?acao=alterar&codigo=${usuario.id}" class="btn btn-success" role="button">Alterar</a>
-                                            <a href="javascript:confirmarExclusao(${usuario.id});" class="btn btn-danger" role="button"><span class="glyphicon glyphicon-remove"></span>Excluir</a>
+                                            <a href="javascript:confirmarExclusao(${usuario.id});" class="btn btn-danger" role="button"><span class="glyphicon glyphicon-trash  con-trash"></span>Excluir</a>
                                         </td>
                                     </tr>  
                                 </c:forEach>

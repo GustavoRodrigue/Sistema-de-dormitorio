@@ -110,7 +110,7 @@ public class Quartos implements Serializable {
 
     @Override
     public String toString() {
-        return "model.Quartos[ id=" + id + " ]";
+        return tipoQuartos;
     }
 
     @XmlTransient

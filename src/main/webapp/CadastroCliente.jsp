@@ -31,7 +31,7 @@
                                     <input type="text" class="form-control" name="cpf" value="${cliente.cpf}">
                                 </div>
                                
-                                <button type="submit"  class="btn btn-info btn-block"><span class="glyphicon glyphicon-plus"></span>Salvar</button>
+                                <button type="submit"  class="btn btn-info btn-lg btn-block"><span class="glyphicon glyphicon-plus"></span>Salvar</button>
                             </form> 
                         </div>
                         <div class="col-sm-12"></div>

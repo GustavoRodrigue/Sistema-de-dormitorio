@@ -49,7 +49,7 @@ public class ClienteController1 extends HttpServlet {
 
                 sessao.invalidate();
                 out.println("<script>alert('Cliente excluido com sucesso!');</script>");
-                out.println("<script>location.href='./index.jsp'</script>");
+                out.println("<script>location.href='./cliente.jsp'</script>");
             }
         } catch (Exception e) {;
             System.out.println("Erro ao recuperar usuario!");
@@ -103,7 +103,7 @@ public class ClienteController1 extends HttpServlet {
         }
         PrintWriter out = response.getWriter();
         out.println("<script>alert('" + menssagem + "');</script>");
-        out.println("<script>location.href='./index.jsp'</script>");
+        out.println("<script>location.href='./cliente.jsp'</script>");
 
     }
 

@@ -33,7 +33,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            <a href="cadastroQuartos.jsp"><button  type="submit" class="btn btn-info btn-block" style="margin-bottom: 30px;">Novo</button></a>
+                            <a href="cadastroQuartos.jsp"><button  type="submit" class="btn btn-info btn-lg btn-block" style="margin-bottom: 30px;">Novo</button></a>
 
                             <table class="table table-striped">
                                 <tr class="thead-dark">

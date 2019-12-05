@@ -6,6 +6,7 @@
 package model;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,6 +18,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -25,20 +29,28 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "aluguel")
-
 public class Aluguel implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "idAluguel")
-    private Integer idAluguel;
-    @Column(name = "qtdDias")
-    private Integer qtdDias;
-    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
+    @Column(name = "id")
+    private Integer id;
+    @Column(name = "data_entrada")
+    @Temporal(TemporalType.DATE)
+    private Date dataEntrada;
+    @Column(name = "data_encerramento")
+    @Temporal(TemporalType.DATE)
+    private Date dataEncerramento;
+    @Basic(optional = false)
+    @NotNull
     @Column(name = "valorReceber")
-    private Float valorReceber;
+    private float valorReceber;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "status")
+    private boolean status;
     @JoinColumn(name = "idCliente", referencedColumnName = "id")
     @ManyToOne
     private Cliente idCliente;
@@ -49,32 +61,54 @@ public class Aluguel implements Serializable {
     public Aluguel() {
     }
 
-    public Aluguel(Integer idAluguel) {
-        this.idAluguel = idAluguel;
+    public Aluguel(Integer id) {
+        this.id = id;
     }
 
-    public Integer getIdAluguel() {
-        return idAluguel;
+    public Aluguel(Integer id, float valorReceber, boolean status) {
+        this.id = id;
+        this.valorReceber = valorReceber;
+        this.status = status;
     }
 
-    public void setIdAluguel(Integer idAluguel) {
-        this.idAluguel = idAluguel;
+    public Integer getId() {
+        return id;
     }
 
-    public Integer getQtdDias() {
-        return qtdDias;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public void setQtdDias(Integer qtdDias) {
-        this.qtdDias = qtdDias;
+    public Date getDataEntrada() {
+        return dataEntrada;
     }
 
-    public Float getValorReceber() {
+    public void setDataEntrada(Date dataEntrada) {
+        this.dataEntrada = dataEntrada;
+    }
+
+    public Date getDataEncerramento() {
+        return dataEncerramento;
+    }
+
+    public void setDataEncerramento(Date dataEncerramento) {
+        this.dataEncerramento = dataEncerramento;
+    }
+
+    public float getValorReceber() {
         return valorReceber;
     }
 
-    public void setValorReceber(Float valorReceber) {
+    public void setValorReceber(float valorReceber) {
         this.valorReceber = valorReceber;
+    }
+
+    public boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
     public Cliente getIdCliente() {
@@ -96,7 +130,7 @@ public class Aluguel implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idAluguel != null ? idAluguel.hashCode() : 0);
+        hash += (id != null ? id.hashCode() : 0);
         return hash;
     }
 
@@ -107,7 +141,7 @@ public class Aluguel implements Serializable {
             return false;
         }
         Aluguel other = (Aluguel) object;
-        if ((this.idAluguel == null && other.idAluguel != null) || (this.idAluguel != null && !this.idAluguel.equals(other.idAluguel))) {
+        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
         return true;
@@ -115,7 +149,7 @@ public class Aluguel implements Serializable {
 
     @Override
     public String toString() {
-        return "model.Aluguel[ idAluguel=" + idAluguel + " ]";
+        return "model.Aluguel[ id=" + id + " ]";
     }
     
 }
