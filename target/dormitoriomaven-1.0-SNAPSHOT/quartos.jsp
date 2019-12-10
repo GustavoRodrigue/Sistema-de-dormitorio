@@ -15,6 +15,7 @@
         <title>Quartos</title>
         <meta name="viewport" content="width=device-width, initial-scale=1 " >
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+         <script src="https://kit.fontawesome.com/90798cd9b8.js" crossorigin="anonymous"></script>
         <script src="js/jquery.js"></script>
         <script src="bootstrap/js/bootstrap.js"></script>
         <script>
@@ -26,14 +27,15 @@
         </script>
     </head>
     <body>
-        <div class="container" style="margin-top: 30px;">
+        <c:import url="index.jsp" />
+        <div class="container" style="margin-top: 3px;">
 
             <div class="card border-primary">
                 <div class="card-header bg-primary" >Quartos</div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            <a href="cadastroQuartos.jsp"><button  type="submit" class="btn btn-info btn-lg btn-block" style="margin-bottom: 30px;">Novo</button></a>
+                            <a href="cadastroQuartos.jsp"><button  type="submit" class="btn btn-info btn-lg btn-block" style="margin-bottom: 30px;"><i class="fas fa-plus"></i> Novo</button></a>
 
                             <table class="table table-striped">
                                 <tr class="thead-dark">
@@ -50,8 +52,8 @@
                                         <td>${quarto.valorQuarto}</td>
 
                                         <td>
-                                            <a href="QuartosController?acao=alterar&codigo=${quarto.id}" class="btn btn-success" role="button">Alterar</a>
-                                            <a href="javascript:confirmarExclusao(${quarto.id});" class="btn btn-danger" role="button"><span class="glyphicon glyphicon-remove"></span>Excluir</a>
+                                            <a href="QuartosController?acao=alterar&codigo=${quarto.id}" class="btn btn-success" role="button"><i class="fas fa-edit"></i> Alterar</a>
+                                            <a href="javascript:confirmarExclusao(${quarto.id});" class="btn btn-danger" role="button"><i class="fas fa-trash-alt"></i> Excluir</a>
                                         </td>
                                     </tr>  
                                 </c:forEach>

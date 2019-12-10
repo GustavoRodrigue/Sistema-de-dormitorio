@@ -16,8 +16,10 @@
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
         <script src="js/jquery.js"></script>
         <script src="bootstrap/js/bootstrap.js"></script>
+        <link href="css/style1.css" rel="stylesheet">
     </head>
     <body>
+         <c:import url="index.jsp" />
         <div class="container" style="margin-top: 30px;">
 
             <div class="card border-primary">
@@ -30,14 +32,16 @@
 
                                 <div class="form-group">
                                     <label>Data de Entrada</label>
-                                    <input type="text" class="form-control" name="dataEntrada" value="${aluguel.dataEntrada}">
+                                    <input type="date" max="3000-12-31" min="1000-01-01" class="form-control" name="dataEntrada" value="${aluguel.dataEntrada}" >
                                 </div>
-                                <div class="form-group">
-                                    <label>Data de Saida</label>
-                                    <input type="text" class="form-control" name="dataEncerramento" value="${aluguel.dataEncerramento}">
+                                <div class="form-group flutuar">
+                                    <label>Data de Saida</label>                                   
+                                    <input type="date" max="3000-12-31" min="1000-01-01" class="form-control flutuar" 
+                                           name="dataEncerramento" value="${aluguel.dataEncerramento}" >
                                 </div>
+                              
                                 <div class="form-group">
-                                    <label>Valor A receber</label>
+                                    <label>Valor A receber</label><br>
                                     <input type="text" class="form-control" name="valorReceber" value="${aluguel.valorReceber}">
                                 </div>
 
@@ -48,7 +52,7 @@
                                         <jsp:useBean id="c" class="dao.ClienteDao"></jsp:useBean>
                                         <c:forEach var="cliente" items="${c.lista}">
 
-                                            <option  value="${cliente.id}">${cliente.nome}</option>
+                                            <option value="${cliente.id}">${cliente.nome}</option>
 
                                         </c:forEach>
                                     </select>

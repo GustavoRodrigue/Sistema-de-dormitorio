@@ -4,10 +4,13 @@ E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\dao\Ge
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\model\Aluguel.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\dao\QuartosDao.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\Teste.java
+E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\model\Finalizaraluguel.java
+E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\dao\FinalizarAluguelDao.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\model\Usuario.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\model\Quartos.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\controller\AluguelController.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\bean\ClienteBean.java
+E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\controller\FinalizarAluguelController.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\model\Cliente.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\controller\QuartosController.java
 E:\Users\gustavo\Documents\NetBeansProjects\dormitoriomaven\src\main\java\dao\UsuarioDao.java

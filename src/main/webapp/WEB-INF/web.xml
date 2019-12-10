@@ -19,6 +19,10 @@
         <servlet-name>AluguelController</servlet-name>
         <servlet-class>controller.AluguelController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FinalizarAluguelController</servlet-name>
+        <servlet-class>controller.FinalizarAluguelController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ClienteController</servlet-name>
         <url-pattern>/ClienteController</url-pattern>
@@ -34,6 +38,10 @@
     <servlet-mapping>
         <servlet-name>AluguelController</servlet-name>
         <url-pattern>/AluguelController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FinalizarAluguelController</servlet-name>
+        <url-pattern>/FinalizarAluguelController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

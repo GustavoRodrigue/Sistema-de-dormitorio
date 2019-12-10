@@ -1,6 +1,7 @@
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +13,7 @@
         <script src="bootstrap/js/bootstrap.js"></script>
     </head>
     <body>
+         <c:import url="index.jsp" />
         <div class="container" style="margin-top: 30px;">
 
             <div class="card border-primary">

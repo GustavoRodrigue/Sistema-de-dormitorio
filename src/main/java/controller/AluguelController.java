@@ -38,6 +38,7 @@ public class AluguelController extends HttpServlet {
             AluguelDao dao = new AluguelDao();
             if (request.getParameter("acao").equals("alterar")) {
                 aluguel = dao.BuscaPorId(codigo);
+                    
                 RequestDispatcher disp = getServletContext().getRequestDispatcher("/cadastroAluguel.jsp");
                 request.setAttribute("aluguel", aluguel);
                 disp.forward(request, response);
@@ -64,43 +65,23 @@ public class AluguelController extends HttpServlet {
         Cliente cliente = new Cliente();
         Quartos quarto = new Quartos();
         AluguelDao dao = new AluguelDao();
-//        try {
+        try {
             SimpleDateFormat sd = new SimpleDateFormat("dd/MM/yyyy");
 
             if (update.equals("alterar")) {
 
                 aluguel.setId(Integer.parseInt(request.getParameter("id")));
-
-            try {
                 aluguel.setDataEntrada(sd.parse(request.getParameter("dataEntrada")));
-            } catch (ParseException ex) {
-                Logger.getLogger(AluguelController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-            try {
                 aluguel.setDataEncerramento(sd.parse(request.getParameter("dataEncerramento")));
-            } catch (ParseException ex) {
-                Logger.getLogger(AluguelController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
                 aluguel.setValorReceber(Float.parseFloat(request.getParameter("valorReceber")));
 
                 dao.atualizar(aluguel);
                 menssagem = "alterado com Sucesso! ";
 
             } else {
-            try {
+
                 aluguel.setDataEntrada(sd.parse(request.getParameter("dataEntrada")));
-            } catch (ParseException ex) {
-                Logger.getLogger(AluguelController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-            try {
                 aluguel.setDataEncerramento(sd.parse(request.getParameter("dataEncerramento")));
-            } catch (ParseException ex) {
-                Logger.getLogger(AluguelController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
                 aluguel.setValorReceber(Float.parseFloat(request.getParameter("valorReceber")));
                 aluguel.setStatus(true);
                 String Icliente = request.getParameter("idCliente");
@@ -117,9 +98,9 @@ public class AluguelController extends HttpServlet {
                 menssagem = "Salvo com Sucesso! ";
                 //menssagem = "Usuario cadstrado com sucesso";;
             }
-//        } catch (Exception e) {
-//            menssagem = "Erro ao gravar usuario!";
-//        };
+        } catch (Exception e) {
+            menssagem = "Erro ao gravar usuario!";
+        }
         PrintWriter out = response.getWriter();
         out.println("<script>alert('" + menssagem + "');</script>");
         out.println("<script>location.href='./aluguel.jsp'</script>");

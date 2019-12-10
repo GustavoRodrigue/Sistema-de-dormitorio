@@ -8,6 +8,7 @@
         <title>Usuario</title>
         <meta name="viewport" content="width=device-width, initial-scale=1 " >
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <script src="https://kit.fontawesome.com/90798cd9b8.js" crossorigin="anonymous"></script>
         <script src="js/jquery.js"></script>
         <script src="bootstrap/js/bootstrap.js"></script>
         <script>
@@ -19,14 +20,15 @@
         </script>
     </head>
     <body>
-        <div class="container" style="margin-top: 30px;">
+         <c:import url="index.jsp" />
+         <div class="container" style="margin-top: 3px;">
 
             <div class="card border-primary">
                 <div class="card-header bg-primary" >Cliente</div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            <a href="cadastroUsuario.jsp" class=""><button  type="submit" class="btn btn-info btn-lg btn-block" style="margin-bottom: 30px;">Novo</button></a>
+                            <a href="cadastroUsuario.jsp" class=""><button  type="submit" class="btn btn-info btn-lg btn-block" style="margin-bottom: 30px;"><i class="fas fa-plus"></i> Novo</button></a>
 
                             <table class="table table-striped">
                                 <tr class="thead-dark">
@@ -44,8 +46,8 @@
                                         <td>${usuario.email}</td>
                                         <td>${usuario.cpf}</td>
                                         <td>
-                                            <a href="UsuarioController?acao=alterar&codigo=${usuario.id}" class="btn btn-success" role="button">Alterar</a>
-                                            <a href="javascript:confirmarExclusao(${usuario.id});" class="btn btn-danger" role="button"><span class="glyphicon glyphicon-trash  con-trash"></span>Excluir</a>
+                                            <a href="UsuarioController?acao=alterar&codigo=${usuario.id}" class="btn btn-success" role="button"><i class="fas fa-edit"></i> Alterar</a>
+                                            <a href="javascript:confirmarExclusao(${usuario.id});" class="btn btn-danger" role="button"><i class="fas fa-trash-alt"></i> Excluir</a>
                                         </td>
                                     </tr>  
                                 </c:forEach>

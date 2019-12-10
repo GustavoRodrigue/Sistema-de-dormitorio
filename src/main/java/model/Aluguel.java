@@ -6,6 +6,11 @@
 package model;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -17,11 +22,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -30,6 +37,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @Table(name = "aluguel")
 public class Aluguel implements Serializable {
+
+    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
+    @Column(name = "valorReceber")
+    private Float valorReceber;
+    @OneToMany(mappedBy = "idAluguel")
+    private Collection<Finalizaraluguel> finalizaraluguelCollection;
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -43,10 +56,6 @@ public class Aluguel implements Serializable {
     @Column(name = "data_encerramento")
     @Temporal(TemporalType.DATE)
     private Date dataEncerramento;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "valorReceber")
-    private float valorReceber;
     @Basic(optional = false)
     @NotNull
     @Column(name = "status")
@@ -64,6 +73,21 @@ public class Aluguel implements Serializable {
     public Aluguel(Integer id) {
         this.id = id;
     }
+
+    public int verificaQtdDias(){
+        Calendar calendar1 = Calendar.getInstance();
+        calendar1.setTime(getDataEncerramento());//data maior
+
+        Calendar calendar2 = Calendar.getInstance();
+        calendar2.setTime(getDataEntrada());// data menor
+
+        calendar1.add(Calendar.DATE, -calendar2.get(Calendar.DAY_OF_MONTH));
+        System.out.println(calendar1.get(Calendar.DAY_OF_MONTH));
+        return calendar1.get(Calendar.DAY_OF_MONTH);
+       
+    }
+
+    ;
 
     public Aluguel(Integer id, float valorReceber, boolean status) {
         this.id = id;
@@ -93,14 +117,6 @@ public class Aluguel implements Serializable {
 
     public void setDataEncerramento(Date dataEncerramento) {
         this.dataEncerramento = dataEncerramento;
-    }
-
-    public float getValorReceber() {
-        return valorReceber;
-    }
-
-    public void setValorReceber(float valorReceber) {
-        this.valorReceber = valorReceber;
     }
 
     public boolean getStatus() {
@@ -151,5 +167,22 @@ public class Aluguel implements Serializable {
     public String toString() {
         return "model.Aluguel[ id=" + id + " ]";
     }
-    
+
+    public Float getValorReceber() {
+        return valorReceber;
+    }
+
+    public void setValorReceber(Float valorReceber) {
+        this.valorReceber = valorReceber;
+    }
+
+    @XmlTransient
+    public Collection<Finalizaraluguel> getFinalizaraluguelCollection() {
+        return finalizaraluguelCollection;
+    }
+
+    public void setFinalizaraluguelCollection(Collection<Finalizaraluguel> finalizaraluguelCollection) {
+        this.finalizaraluguelCollection = finalizaraluguelCollection;
+    }
+
 }

@@ -1,6 +1,7 @@
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +13,7 @@
         <script src="bootstrap/js/bootstrap.js"></script>
     </head>
     <body>
+        <c:import url="index.jsp" />
         <div class="container" style="margin-top: 30px;">
 
             <div class="card border-primary">
@@ -24,11 +26,11 @@
                                 
                                 <div class="form-group">
                                     <label>Nome</label>
-                                    <input type="text" class="form-control" name="nome" value="${cliente.nome}">
+                                    <input type="text" required="" class="form-control" name="nome" value="${cliente.nome}">
                                 </div>
                                 <div class="form-group">
                                     <label>Cpf</label>
-                                    <input type="text" class="form-control" name="cpf" value="${cliente.cpf}">
+                                    <input type="text" required="" class="form-control" name="cpf" value="${cliente.cpf}">
                                 </div>
                                
                                 <button type="submit"  class="btn btn-info btn-lg btn-block"><span class="glyphicon glyphicon-plus"></span>Salvar</button>

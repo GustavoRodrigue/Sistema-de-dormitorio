@@ -7,6 +7,8 @@
     <class>model.Quartos</class>
     <class>model.Cliente_1</class>
     <class>model.Aluguel</class>
+    <class>model.Aluguel_1</class>
+    <class>model.Finalizaraluguel</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dormitorionovo?zeroDateTimeBehavior=convertToNull"/>
