@@ -28,14 +28,14 @@
     </head>
     <body>
         <c:import url="index.jsp" />
-        <div class="container" style="margin-top: 3px;">
+        <div class="container">
 
-            <div class="card border-primary">
-                <div class="card-header bg-primary" >Quartos</div>
+            <div class="card border-dark">
+                <div class="card-header " >Quartos</div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            <a href="cadastroQuartos.jsp"><button  type="submit" class="btn btn-info btn-lg btn-block" style="margin-bottom: 30px;"><i class="fas fa-plus"></i> Novo</button></a>
+                            <a href="cadastroQuartos.jsp"><button  type="submit" class="btn btn-dark btn-lg btn-block" style="margin-bottom: 30px;"><i class="fas fa-plus"></i> Novo</button></a>
 
                             <table class="table table-striped">
                                 <tr class="thead-dark">
@@ -47,7 +47,7 @@
                                 <jsp:useBean id="q" class="dao.QuartosDao"></jsp:useBean>
                                 <c:forEach var="quarto" items="${q.lista}">
                                     <tr>
-                                        <td>${quarto.numeroQuarto}</td>
+                                        <td>${quarto.id}</td>
                                         <td>${quarto.tipoQuartos}</td>
                                         <td>${quarto.valorQuarto}</td>
 

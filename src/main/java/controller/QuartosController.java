@@ -26,7 +26,7 @@ import model.Quartos;
 public class QuartosController extends HttpServlet {
 
     String update = "update";
- 
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -45,6 +45,7 @@ public class QuartosController extends HttpServlet {
                 request.setAttribute("quartos", quartos);
                 disp.forward(request, response);
             } else if (request.getParameter("acao").equals("excluir")) {
+                System.out.println("codigo" + codigo);
                 dao.ApagaCliente(codigo);
                 RequestDispatcher disp = getServletContext().getRequestDispatcher("/cadastroQuartos.jsp");
 
@@ -58,7 +59,6 @@ public class QuartosController extends HttpServlet {
         }
     }
 
-  
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -69,25 +69,25 @@ public class QuartosController extends HttpServlet {
         QuartosDao dao = new QuartosDao();
 //        try {
 
-            if (update.equals("alterar")) {
+        if (update.equals("alterar")) {
 
-                quartos.setId(Integer.parseInt(request.getParameter("id")));
-                quartos.setNumeroQuarto(Integer.parseInt(request.getParameter("numeroQuarto")));
-                quartos.setTipoQuartos(request.getParameter("tipoQuartos"));
-                quartos.setValorQuarto(Float.parseFloat(request.getParameter("valorQuarto")));
+            quartos.setId(Integer.parseInt(request.getParameter("id")));
+            
+            quartos.setTipoQuartos(request.getParameter("tipoQuartos"));
+            quartos.setValorQuarto(Float.parseFloat(request.getParameter("valorQuarto")));
 
-                dao.atualizar(quartos);
-                menssagem = "alterado com Sucesso! ";
-            } else {
-                quartos.setNumeroQuarto(Integer.parseInt(request.getParameter("numeroQuarto")));
-                quartos.setTipoQuartos(request.getParameter("tipoQuartos"));
-                quartos.setValorQuarto(Float.parseFloat(request.getParameter("valorQuarto")));
+            dao.atualizar(quartos);
+            menssagem = "alterado com Sucesso! ";
+        } else {
+           
+            quartos.setTipoQuartos(request.getParameter("tipoQuartos"));
+            quartos.setValorQuarto(Float.parseFloat(request.getParameter("valorQuarto")));
 
-                dao.salvar(quartos);
+            dao.salvar(quartos);
 
-                menssagem = "Salvo com Sucesso! ";
-                //menssagem = "Usuario cadstrado com sucesso";;
-            }
+            menssagem = "Salvo com Sucesso! ";
+            //menssagem = "Usuario cadstrado com sucesso";;
+        }
 //        } catch (Exception e) {
 //            menssagem = "Erro ao gravar usuario!";
 //        }

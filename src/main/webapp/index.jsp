@@ -10,19 +10,25 @@
         <script src="https://kit.fontawesome.com/90798cd9b8.js" crossorigin="anonymous"></script>
         <link href="css/style1.css" rel="stylesheet">
 
+<!--        <style>
+            body{
+            background-image: url("img/dormitorio.png  ");
+            }
+        </style>-->
     </head>
    
         <title>Sidebar-nav</title>
     
 
 <body>
-
+    
     <div class="sidebar">
         
 
         <ul class="sidebar-nav">
+            
             <li>
-                <a id="navbar-toggle">Close <i class="fa fa-bars menu-icon fa-2x" aria-hidden="true"></i></a>
+                <a id="navbar-toggle">Dormitorio <i class="fa fa-bars menu-icon fa-2x" aria-hidden="true"></i></a>
             </li>
             <li>
                 <a href="index.jsp">Home <i class="fa fa-home menu-icon fa-2x" aria-hidden="true"></i></a>
@@ -38,11 +44,11 @@
                 </a>
             </li>
             <li>
-                <a href="aluguel.jsp">Aluguel<i class="fa fa-user menu-icon fa-2x" aria-hidden="true"></i>
+                <a href="aluguel.jsp">Aluguel<i class="fas fa-door-open menu-icon fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
             <li>
-                <a href="finalizarAluguel.jsp">Finalizar Aluguel<i class="fa fa-user menu-icon fa-2x" aria-hidden="true"></i>
+                <a href="finalizarAluguel.jsp">Finalizar Aluguel<i class="fas fa-door-closed menu-icon fa-2x" aria-hidden="true"></i>
                 </a>
             </li>
             

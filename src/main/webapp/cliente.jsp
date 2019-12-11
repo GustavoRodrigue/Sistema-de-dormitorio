@@ -26,14 +26,14 @@
     </head>
     <body>
         <c:import url="index.jsp" />
-        <div class="container" style="margin-top: 3px;">
+        <div class="container">
 
-            <div class="card border-primary">
-                <div class="card-header bg-primary" >Cliente</div>
+            <div class="card border-dark">
+                <div class="card-header" >Cliente</div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            <a href="CadastroCliente.jsp"><button  type="submit" class="btn btn-info btn-lg btn-block" style="margin-bottom: 30px;"><i class="fas fa-plus"></i> Novo</button></a>
+                            <a href="CadastroCliente.jsp"><button  type="submit" class="btn btn-dark btn-lg btn-block" style="margin-bottom: 30px;"><i class="fas fa-plus"></i> Novo</button></a>
 
                             <table class="table table-striped">
                                 <tr class="thead-dark">

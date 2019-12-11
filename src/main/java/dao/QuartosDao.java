@@ -58,11 +58,14 @@ public class QuartosDao extends GenericDao<Quartos, Integer>{
         Quartos quarto = null;
         try {
             quarto = em.find(Quartos.class, id);
+            
             em.getTransaction().begin();
             em.remove(quarto);
             em.getTransaction().commit();
         } catch (Exception e) {
-            System.err.println(e);
+//            System.err.println(e);;
+            e.printStackTrace();
+            //
             em.getTransaction().rollback();
         } finally {
             em.close();

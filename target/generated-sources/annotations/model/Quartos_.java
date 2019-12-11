@@ -13,7 +13,6 @@ public abstract class Quartos_ {
 	public static volatile CollectionAttribute<Quartos, Aluguel> aluguelCollection;
 	public static volatile SingularAttribute<Quartos, Float> valorQuarto;
 	public static volatile SingularAttribute<Quartos, Integer> id;
-	public static volatile SingularAttribute<Quartos, Integer> numeroQuarto;
 
 }
 

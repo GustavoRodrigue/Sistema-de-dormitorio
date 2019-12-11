@@ -20,10 +20,10 @@
     </head>
     <body>
          <c:import url="index.jsp" />
-        <div class="container" style="margin-top: 30px;">
+        <div class="container">
 
             <div class="card border-primary">
-                <div class="card-header bg-primary" >Cliente</div>
+                <div class="card-header" >Cliente</div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-12">
@@ -32,17 +32,17 @@
 
                                 <div class="form-group">
                                     <label>Data de Entrada</label>
-                                    <input type="date" max="3000-12-31" min="1000-01-01" class="form-control" name="dataEntrada" value="${aluguel.dataEntrada}" >
+                                    <input id="inputDate" type="date"  class="form-control" name="dataEntrada" value="${aluguel.dataEntrada}" >
                                 </div>
                                 <div class="form-group flutuar">
                                     <label>Data de Saida</label>                                   
-                                    <input type="date" max="3000-12-31" min="1000-01-01" class="form-control flutuar" 
+                                    <input type="text" class="form-control flutuar" 
                                            name="dataEncerramento" value="${aluguel.dataEncerramento}" >
                                 </div>
                               
                                 <div class="form-group">
                                     <label>Valor A receber</label><br>
-                                    <input type="text" class="form-control" name="valorReceber" value="${aluguel.valorReceber}">
+                                    <input type="text" class="form-control" name="valorReceber" value="${aluguel.valor()}">
                                 </div>
 
                                 <div class="form-group">

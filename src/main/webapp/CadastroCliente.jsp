@@ -14,10 +14,10 @@
     </head>
     <body>
         <c:import url="index.jsp" />
-        <div class="container" style="margin-top: 30px;">
+        <div class="container">
 
             <div class="card border-primary">
-                <div class="card-header bg-primary" >Cliente</div>
+                <div class="card-header " >Cliente</div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-12">

@@ -10,6 +10,8 @@ import javax.persistence.metamodel.StaticMetamodel;
 @StaticMetamodel(Aluguel.class)
 public abstract class Aluguel_ {
 
+	public static volatile SingularAttribute<Aluguel, Quartos> quartos;
+	public static volatile SingularAttribute<Aluguel, Float> total;
 	public static volatile SingularAttribute<Aluguel, Float> valorReceber;
 	public static volatile SingularAttribute<Aluguel, Date> dataEncerramento;
 	public static volatile SingularAttribute<Aluguel, Cliente> idCliente;

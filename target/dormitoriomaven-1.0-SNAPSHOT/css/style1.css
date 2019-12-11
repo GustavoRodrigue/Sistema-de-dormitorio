@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap");
+* {
+    font-family: 'Poppins', sans-serif;
+}
 
 .sidebar {
     color: #FFF;
@@ -10,9 +14,9 @@
     z-index: 1000;
     display: block;
     -webkit-transition: margin 2s;
-    transition: margin 2s;
+    transition: margin 0.5s;
     flex:1;
-  
+
 }
 #navbar-toggle {
     cursor: pointer;
@@ -43,7 +47,7 @@
     line-height: 25px;
     padding: 20px;
     vertical-align: center;
-  
+
 }
 .sidebar-nav li a:hover {
     background:#121213;
@@ -63,9 +67,19 @@ body{
     margin-right: 10px;
 }
 .col-sm-12{
-  
+
 }
 .custom-select{
     height: 35px;
     font-size: 1.5rem;
+}
+.bg-dark{
+    color: #FFF !important;
+
+}
+.card-header{
+    color: #fff;
+    background-color: #343a40 !important;  
+    text-align: center;
+    font-size: x-large;
 }

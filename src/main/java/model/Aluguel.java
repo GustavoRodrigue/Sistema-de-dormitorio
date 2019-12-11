@@ -86,8 +86,13 @@ public class Aluguel implements Serializable {
         return calendar1.get(Calendar.DAY_OF_MONTH);
        
     }
-
-    ;
+   
+//    public float valor(){
+//       
+//        float total = quartos.getValorQuarto()* verificaQtdDias();
+//        System.out.println("tt"+total);
+////        return total;;;
+//    }
 
     public Aluguel(Integer id, float valorReceber, boolean status) {
         this.id = id;

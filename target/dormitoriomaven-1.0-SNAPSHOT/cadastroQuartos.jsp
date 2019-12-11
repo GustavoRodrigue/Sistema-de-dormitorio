@@ -13,20 +13,17 @@
     </head>
     <body>
          <c:import url="index.jsp" />
-        <div class="container" style="margin-top: 30px;">
+        <div class="container" style="margin-top: 3px;">
 
             <div class="card border-primary">
-                <div class="card-header bg-primary" >Cliente</div>
+                <div class="card-header" >Cliente</div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-12">
                             <form action="QuartosController" role="form" method="POST">
-                                <input type="hidden" name="id"  value="${quarto.id}" >
+                                <input type="hidden" name="id"  value="${quarto.numeroQuarto}" >
 
-                                <div class="form-group">
-                                    <label>Numero do Quarto</label>
-                                    <input type="text" class="form-control" name="numeroQuarto" value="${quarto.numeroQuarto}">
-                                </div>
+                               
                                 <div class="form-group">
                                     <label>Tipo de Quarto</label>
                                     <input type="text" class="form-control" name="tipoQuartos" value="${quarto.tipoQuartos}">

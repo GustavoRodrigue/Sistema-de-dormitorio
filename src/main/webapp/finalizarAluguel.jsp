@@ -14,10 +14,10 @@
     </head>
     <body>
         <c:import url="index.jsp" />
-        <div class="container" style="margin-top: 3px;">
+        <div class="container">
 
-            <div class="card border-primary">
-                <div class="card-header bg-primary" >Aluguel</div>
+            <div class="card border-dark">
+                <div class="card-header" >Aluguel</div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-12">
@@ -44,7 +44,7 @@
 
                                         <form action="AluguelController" role="form" method="POST">
                                             <input type="hidden" name="id"  value="${aluguel.id}" >
-
+                                            
                                             <td>
                                                 <button type="submit"  class="btn btn-info btn-block">
                                                     Finalizar Aluguel</button>

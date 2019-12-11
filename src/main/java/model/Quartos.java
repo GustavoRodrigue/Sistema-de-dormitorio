@@ -34,8 +34,6 @@ public class Quartos implements Serializable {
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
-    @Column(name = "numeroQuarto")
-    private Integer numeroQuarto;
     @Size(max = 50)
     @Column(name = "tipoQuartos")
     private String tipoQuartos;
@@ -45,8 +43,8 @@ public class Quartos implements Serializable {
 
     public Quartos() {
     }
-    public Quartos(int numeroQuarto, String tipoQuartos, float valorQuarto) {
-        this.numeroQuarto = numeroQuarto;
+    public Quartos( String tipoQuartos, float valorQuarto) {
+        
         this.tipoQuartos = tipoQuartos;
         this.valorQuarto = valorQuarto;
     }
@@ -63,13 +61,7 @@ public class Quartos implements Serializable {
         this.id = id;
     }
 
-    public Integer getNumeroQuarto() {
-        return numeroQuarto;
-    }
-
-    public void setNumeroQuarto(Integer numeroQuarto) {
-        this.numeroQuarto = numeroQuarto;
-    }
+    
     
 
     public String getTipoQuartos() {
