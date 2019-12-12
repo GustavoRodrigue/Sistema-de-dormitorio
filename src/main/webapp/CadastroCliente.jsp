@@ -32,6 +32,10 @@
                                     <label>Cpf</label>
                                     <input type="text" required="" class="form-control" name="cpf" value="${cliente.cpf}">
                                 </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="text" required="" class="form-control" name="email" value="${cliente.email}">
+                                </div>
                                
                                 <button type="submit"  class="btn btn-info btn-lg btn-block"><span class="glyphicon glyphicon-plus"></span>Salvar</button>
                             </form> 

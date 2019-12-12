@@ -18,6 +18,10 @@
     flex:1;
 
 }
+a{
+    text-decoration: none;
+}
+
 #navbar-toggle {
     cursor: pointer;
 }

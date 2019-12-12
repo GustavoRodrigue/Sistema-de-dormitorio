@@ -42,7 +42,8 @@ public class Cliente implements Serializable {
     @Size(max = 50)
     @Column(name = "cpf")
     private String cpf;
-
+    @Column(name = "email")
+    private String email;
     public Cliente() {
     }
     public Cliente(String nome, String cpf) {
@@ -78,6 +79,15 @@ public class Cliente implements Serializable {
         this.cpf = cpf;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    
    
 
   

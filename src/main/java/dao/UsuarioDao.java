@@ -70,4 +70,5 @@ public class UsuarioDao extends GenericDao<Usuario, Integer> {
         return usuario;
 
     }
+  
 }

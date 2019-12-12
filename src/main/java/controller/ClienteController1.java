@@ -87,11 +87,13 @@ public class ClienteController1 extends HttpServlet {
                 cliente.setId(Integer.parseInt(request.getParameter("id")));
                 cliente.setNome(request.getParameter("nome"));
                 cliente.setCpf(request.getParameter("cpf"));
+                cliente.setEmail(request.getParameter("email"));
                 dao.atualizar(cliente);
                 menssagem = "alterado com Sucesso! ";
             } else {
                 cliente.setNome(request.getParameter("nome"));
                 cliente.setCpf(request.getParameter("cpf"));
+                cliente.setEmail(request.getParameter("email"));
 
                 dao.salvar(cliente);
 

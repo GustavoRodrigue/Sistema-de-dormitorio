@@ -20,7 +20,7 @@
         </script>
     </head>
     <body>
-         <c:import url="index.jsp" />
+        <%@include file="index.jsp" %>
          <div class="container" >
 
             <div class="card border-dark">

@@ -40,6 +40,7 @@
                                     <th>id</th>
                                     <th>Nome</th>
                                     <th>Cpf</th>
+                                    <th>Email</th>
                                     <th>Opções</th>
                                 </tr>
                                 <jsp:useBean id="c" class="dao.ClienteDao"></jsp:useBean>
@@ -48,6 +49,7 @@
                                         <td>${cliente.id}</td>
                                         <td>${cliente.nome}</td>
                                         <td>${cliente.cpf}</td>
+                                        <td>${cliente.email}</td>
                                         <td>
                                             <a href="ClienteController1?acao=alterar&codigo=${cliente.id}" class="btn btn-success" role="button"><i class="fas fa-edit"></i> Alterar</a>
                                             <a href="javascript:confirmarExclusao(${cliente.id});" class="btn btn-danger" role="button"><i class="fas fa-trash-alt"></i> Excluir</a>
