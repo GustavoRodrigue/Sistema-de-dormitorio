@@ -14,9 +14,9 @@
     </head>
     <body>
          <c:import url="index.jsp" />
-        <div class="container" style="margin-top: 30px;">
+        <div class="container" >
 
-            <div class="card border-primary">
+            <div class="card border-dark">
                 <div class="card-header" >Cliente</div>
                 <div class="card-body">
                     <div class="row">

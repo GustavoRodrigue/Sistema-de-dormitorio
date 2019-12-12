@@ -37,7 +37,7 @@
                                 </div>
                                 <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Entrar">
                             </form>
-                            <a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
+                            <a href="cadastroUsuario.jsp" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
                             <hr>
                         </div>
                     </div> <!-- /.col-xs-12 -->
