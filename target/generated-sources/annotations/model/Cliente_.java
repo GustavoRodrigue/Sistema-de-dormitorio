@@ -13,6 +13,7 @@ public abstract class Cliente_ {
 	public static volatile SingularAttribute<Cliente, String> cpf;
 	public static volatile SingularAttribute<Cliente, String> nome;
 	public static volatile SingularAttribute<Cliente, Integer> id;
+	public static volatile SingularAttribute<Cliente, String> email;
 
 }
 

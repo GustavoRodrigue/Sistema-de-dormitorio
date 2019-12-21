@@ -26,15 +26,15 @@
                                 
                                 <div class="form-group">
                                     <label>Nome</label>
-                                    <input type="text" required="" class="form-control" name="nome" value="${cliente.nome}">
+                                    <input type="text" required="" placeholder="Digite seu nome" class="form-control" name="nome" value="${cliente.nome}">
                                 </div>
                                 <div class="form-group">
                                     <label>Cpf</label>
-                                    <input type="text" required="" class="form-control" name="cpf" value="${cliente.cpf}">
+                                    <input type="text" required="" class="form-control" placeholder="Digite seu CPF" name="cpf" value="${cliente.cpf}">
                                 </div>
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input type="text" required="" class="form-control" name="email" value="${cliente.email}">
+                                    <input type="text" required="" class="form-control" placeholder="Digite seu Email" name="email" value="${cliente.email}">
                                 </div>
                                
                                 <button type="submit"  class="btn btn-info btn-lg btn-block"><span class="glyphicon glyphicon-plus"></span>Salvar</button>

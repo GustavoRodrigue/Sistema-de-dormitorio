@@ -21,24 +21,23 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="form-wrap">
-                            <h1>Dormitorio</h1>
-                            <form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
+                            <h1>Dormitório</h1>
+                            <form role="form" action="SegurancaController" method="post" id="login-form" autocomplete="off">
                                 <div class="form-group">
                                     <label id="label" for="email" >Email</label>
                                     <input type="email" name="email" id="email" class="form-control" placeholder="Digite seu Email">
                                 </div>
                                 <div class="form-group">
                                     <label id="label" for="key" >Senha</label>
-                                    <input type="password" name="key" id="key" class="form-control" placeholder="Digite sua senha">
+                                    <input type="password" name="senha" id="key" class="form-control" placeholder="Digite sua senha">
                                 </div>
                                 <div class="checkbox">
                                     <span class="character-checkbox" onclick="showPassword()"></span>
                                     <span class="label">Salvar senha</span>
                                 </div>
-                                <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Entrar">
+                                <input type="submit" id="btn-login" class="btn  btn-lg btn-block btn-primary" value="Entrar">
                             </form>
-                            <a href="cadastroUsuario.jsp" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
-                            <hr>
+                            
                         </div>
                     </div> <!-- /.col-xs-12 -->
                 </div> <!-- /.row -->
@@ -70,10 +69,7 @@
         <footer id="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12">
-                        <p>Page © - 2014</p>
-                        <p>Powered by <strong><a href="http://www.facebook.com/tavo.qiqe.lucero" target="_blank">TavoQiqe</a></strong></p>
-                    </div>
+                    
                 </div>
             </div>
         </footer>

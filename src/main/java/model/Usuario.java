@@ -43,6 +43,8 @@ public class Usuario implements Serializable {
     @Size(max = 20)
     @Column(name = "cpf")
     private String cpf;
+    @Column(name = "senha")
+    private String senha;
 
     public Usuario() {
     }
@@ -86,6 +88,15 @@ public class Usuario implements Serializable {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+    
 
     @Override
     public int hashCode() {

@@ -36,13 +36,13 @@
                                 </div>
                                 <div class="form-group flutuar">
                                     <label>Data de Saida</label>                                   
-                                    <input type="text" class="form-control flutuar" 
+                                    <input type="date" class="form-control flutuar" 
                                            name="dataEncerramento" value="${aluguel.dataEncerramento}" >
                                 </div>
                               
                                 <div class="form-group">
                                     <label>Valor A receber</label><br>
-                                    <input type="text" class="form-control" name="valorReceber" value="${aluguel.valor()}">
+                                    <input type="text" placeholder="Digite o Valor" class="form-control" name="valorReceber" value="${aluguel.valor()}">
                                 </div>
 
                                 <div class="form-group">

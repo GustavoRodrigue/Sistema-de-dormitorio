@@ -21,7 +21,9 @@
 a{
     text-decoration: none;
 }
-
+.btn:hover {
+    color: #FFF !important;
+}
 #navbar-toggle {
     cursor: pointer;
 }

@@ -56,20 +56,7 @@ public class ClienteController1 extends HttpServlet {
 
         }
 
-//        if(request.getParameter("alterar")!=null && Integer.parseInt(request.getParameter("alterar")) == Integer.parseInt(dados[0]) ){
-//            RequestDispatcher disp = getServletContext().getRequestDispatcher("/CadastroCliente.jsp");
-//            request.setAttribute("cliente", cliente);
-//            disp.forward(request, response);
-//        }else if(request.getParameter("apagar")!=null && Integer.parseInt(request.getParameter("apagar")) == Integer.parseInt(dados[0])){
-//            dao.ApagaCliente(cliente.getId());
-//            RequestDispatcher disp = getServletContext().getRequestDispatcher("/CadastroCliente.jsp");
-//            
-//            sessao.invalidate();
-//            out.println("<script>alert('Cliente excluido com sucesso!');</script>");
-//            out.println("<script>location.href='./index.jsp'</script>");
-//        }else{
-//            out.println("<script>alert('Codigo do usuario nao incontrado ou invalido!');</script>");
-//        };
+
     }
 
     @Override

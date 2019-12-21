@@ -16,6 +16,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import jdk.nashorn.internal.objects.NativeDate;
 import model.Aluguel;
 import model.Cliente;
 import model.Quartos;
@@ -66,20 +67,25 @@ public class AluguelController extends HttpServlet {
         Quartos quarto = new Quartos();
         AluguelDao dao = new AluguelDao();
 //        try {
-            SimpleDateFormat sd = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd");
 
             if (update.equals("alterar")) {
 
                 aluguel.setId(Integer.parseInt(request.getParameter("id")));
             try {
-                
-                aluguel.setDataEntrada(sd.parse(request.getParameter("dataEntrada")));
+                    String dataEntrada = request.getParameter("dataEntrada");
+                Date date = sd.parse(dataEntrada);
+                aluguel.setDataEntrada(new Date(date.getTime()));
+            
                 
             } catch (ParseException ex) {
                 Logger.getLogger(AluguelController.class.getName()).log(Level.SEVERE, null, ex);
             }
             try {
-                aluguel.setDataEncerramento(sd.parse(request.getParameter("dataEncerramento")));
+                String dataEncerramento = request.getParameter("dataEncerramento");
+                Date date1 = sd.parse(dataEncerramento);
+                aluguel.setDataEncerramento(new Date(date1.getTime()));
+                
             } catch (ParseException ex) {
                 Logger.getLogger(AluguelController.class.getName()).log(Level.SEVERE, null, ex);
             }

@@ -10,10 +10,10 @@
         <script src="https://kit.fontawesome.com/90798cd9b8.js" crossorigin="anonymous"></script>
         <link href="css/style1.css" rel="stylesheet">
         <%
-            HttpSession sessao = request.getSession();
-            if (sessao.getAttribute("usuario") == null) {
-                response.sendRedirect("login.jsp");
-            }
+//            HttpSession sessao = request.getSession();
+//            if (sessao.getAttribute("usuario") == null) {
+//                response.sendRedirect("login.jsp");
+//            }
         %>
         <!--        <style>
                     body{
@@ -33,7 +33,7 @@
             <ul class="sidebar-nav">
 
                 <li>
-                    <a id="navbar-toggle">Dormitorio <i class="fa fa-bars menu-icon fa-2x" aria-hidden="true"></i></a>
+                    <a id="navbar-toggle">Dormitório <i class="fa fa-bars menu-icon fa-2x" aria-hidden="true"></i></a>
                 </li>
                 <li>
                     <a href="index.jsp">Home <i class="fa fa-home menu-icon fa-2x" aria-hidden="true"></i></a>
@@ -45,7 +45,7 @@
                     <a href="quartos.jsp">Quartos<i class="fa fa-bed menu-icon fa-2x" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                    <a href="usuario.jsp">Usuario<i class="fa fa-user menu-icon fa-2x" aria-hidden="true"></i>
+                    <a href="usuario.jsp">Usuário<i class="fa fa-user menu-icon fa-2x" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li>

@@ -23,3 +23,4 @@ controller\FinalizarAluguelController.class
 dao\UsuarioDao.class
 Teste.class
 dao\FinalizarAluguelDao.class
+controller\SegurancaController.class

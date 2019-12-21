@@ -26,16 +26,20 @@
 
                                 <div class="form-group">
                                     <label>Nome</label>
-                                    <input type="text" class="form-control" name="nome" value="${usuario.nome}">
+                                    <input type="text" class="form-control" placeholder="Digite seu Nome" name="nome" value="${usuario.nome}">
                                 </div>
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input type="text" class="form-control" name="email" value="${usuario.email}">
+                                    <input type="text" class="form-control" placeholder="Digite seu Email" name="email" value="${usuario.email}">
                                 </div>
                                 <div class="form-group">
                                     <label>Cpf</label>
-                                    <input type="text" class="form-control" name="cpf" value="${usuario.cpf}">
+                                    <input type="text" class="form-control" placeholder="Digite seu CPF" name="cpf" value="${usuario.cpf}">
                                 </div>
+                                <div class=form-group">
+                                    <label>Senha</label>
+                                    <input type="password" class="form-control" name="senha" value="${usuario.senha}">
+                                </div><br>
 
                                 <button type="submit"  class="btn btn-info btn-lg btn-block"><span class="glyphicon glyphicon-plus"></span>Salvar</button>
                             </form> 

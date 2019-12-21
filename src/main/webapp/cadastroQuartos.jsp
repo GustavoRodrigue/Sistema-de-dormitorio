@@ -26,11 +26,11 @@
                                
                                 <div class="form-group">
                                     <label>Tipo de Quarto</label>
-                                    <input type="text" class="form-control" name="tipoQuartos" value="${quarto.tipoQuartos}">
+                                    <input type="text" class="form-control" placeholder="Digite o tipo do quarto" name="tipoQuartos" value="${quarto.tipoQuartos}">
                                 </div>
                                 <div class="form-group">
                                     <label>Valor do Quarto</label>
-                                    <input type="text" class="form-control" name="valorQuarto" value="${quarto.valorQuarto}">
+                                    <input type="text" class="form-control" placeholder="Digite o Valor" name="valorQuarto" value="${quarto.valorQuarto}">
                                 </div>  
 
                                 <button type="submit"  class="btn btn-info btn-lg btn-block"><span class="glyphicon glyphicon-plus"></span>Salvar</button>

@@ -5,6 +5,7 @@
  */
 package controller;
 
+import dao.UsuarioDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -12,6 +13,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import model.Usuario;
 
 /**
  *
@@ -19,32 +22,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "SegurancaController", urlPatterns = {"/SegurancaController"})
 public class SegurancaController extends HttpServlet {
-
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet SegurancaController</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet SegurancaController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
-    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -58,7 +35,7 @@ public class SegurancaController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+
     }
 
     /**
@@ -72,7 +49,33 @@ public class SegurancaController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+            PrintWriter out = response.getWriter();
+        
+        UsuarioDao dao = new UsuarioDao();
+        Usuario usuario = new Usuario();
+        
+       
+        String login = request.getParameter("email");
+        String senha = request.getParameter("senha");
+        
+        usuario =dao.Pegaum(login);
+        
+        
+        if(usuario == null){
+            out.println("<script>alert(' usuario ou senha invalido!');</script>");
+            out.println("<script>location.href='./login.jsp'</script>");
+       
+        }else{
+            if(usuario.getSenha().equals(senha)){
+                HttpSession sessao = request.getSession();
+                sessao.setAttribute("usuario", usuario);
+                response.sendRedirect("index.jsp");
+            }else{
+                out.println("<script>alert(' usuario ou senha invalido!');</script>");
+                out.println("<script>location.href='./login.jsp'</script>");
+            }
+        }
+        
     }
 
     /**

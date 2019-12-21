@@ -1,5 +1,6 @@
 package dao;
 
+import com.mysql.jdbc.PreparedStatement;
 import static dao.GenericDao.getEM;
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -70,5 +71,22 @@ public class UsuarioDao extends GenericDao<Usuario, Integer> {
         return usuario;
 
     }
-  
+    public Usuario Pegaum(String email) {
+        EntityManager em = getEM();
+        Usuario usuario = null;
+        try {
+           
+            
+            usuario = em.find(Usuario.class, email);
+            em.getTransaction().begin();
+            
+            
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            em.close();
+        }
+        return usuario;
+
+    };
 }

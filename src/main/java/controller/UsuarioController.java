@@ -76,6 +76,7 @@ public class UsuarioController extends HttpServlet {
                 usuario.setNome(request.getParameter("nome"));
                 usuario.setEmail(request.getParameter("email"));
                 usuario.setCpf(request.getParameter("cpf"));
+                usuario.setSenha(request.getParameter("senha"));
                
                 dao.atualizar(usuario);
                 menssagem = "alterado com Sucesso! ";
@@ -83,6 +84,7 @@ public class UsuarioController extends HttpServlet {
                 usuario.setNome(request.getParameter("nome"));
                 usuario.setEmail(request.getParameter("email"));
                 usuario.setCpf(request.getParameter("cpf"));
+                usuario.setSenha(request.getParameter("senha"));
 
                 dao.salvar(usuario);
 
